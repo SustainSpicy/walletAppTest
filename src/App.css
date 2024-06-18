@@ -1,0 +1,33 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 20px;
+  max-width: 200px;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid #9c9c9c;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  width: max-content;
+}
+
+.details_address {
+  border: 1px solid #9c9c9c;
+  border-radius: 20px;
+  min-height: 20px;
+  padding: 0 1rem;
+  overflow: hidden;
+  background-color: #464646;
+  color: #c4c4c4;
+  cursor: pointer;
+}
