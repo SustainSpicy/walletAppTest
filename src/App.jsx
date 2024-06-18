@@ -3,7 +3,6 @@ import "./App.css"
 import Web3 from "web3"
 import Loader from "./components/Loader"
 
-//create modal button using web component
 function ConnectButton({ onClick }) {
   return <button onClick={onClick}>Connect Wallet</button>
 }
@@ -44,7 +43,6 @@ function App() {
         setError("No accounts found, check connection!")
         return
       }
-      console.log(accounts)
       const account = accounts[0]
       setWalletAddress(account)
       setIsConnected(true)
@@ -67,7 +65,7 @@ function App() {
           }
         ],
         import.meta.env.VITE_USDT_WALLET_ADDRESS
-      ) // USDT contract address
+      )
 
       const usdtBalance = await usdtContract.methods.balanceOf(account).call()
       setUsdtBalance(web3.utils.fromWei(usdtBalance, "mwei")) // USDT has 6 decimals
@@ -90,6 +88,7 @@ function App() {
 
   const onConnect = async () => {
     try {
+      //delay
       setIsLoading(true)
       setTimeout(() => {
         setIsLoading(false)
